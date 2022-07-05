@@ -1,0 +1,37 @@
+.TodoItem {
+    background-color: #c850c0bb;
+    position: relative;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 10px;    
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+.TodoItem span {
+    width: 10%;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.TodoItem p {
+    width: 80%;
+    text-align: start;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    display: inline-block;
+}
+
+.TodoItem-p--complete {
+    text-decoration: line-through;
+}
+
+.Icon-check--active {
+    color: white;
+}
+
+.closeButton:hover {
+    color: rgb(255, 73, 73);
+}

@@ -1,0 +1,18 @@
+.TodoSearch {
+    width: 70%;
+    max-width: 770px;
+    display: block;
+    margin: 0 auto;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    padding-left: 10px;
+    font-size: 1.7rem;
+    text-align: center;
+    outline: unset;
+}
+
+.TodoSearch:focus {
+    border: 5px solid rgb(229, 135, 255);
+    transition: 1s;
+}

@@ -1,0 +1,35 @@
+.CreateTodoButton {
+    z-index: 10;
+    display: block;
+    position: absolute;
+    left: calc(90% - 35px);
+    top: calc(90% - 35px);
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 0;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--rosaColor);
+    background-color: rgba(255, 255, 255, 0.737);
+    transition: 1s;
+}
+
+.CreateTodoButton:active {
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+@media (min-width: 1000px) {
+    .CreateTodoButton{
+        left: calc(80% - 35px);
+        top: calc(86% - 35px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .CreateTodoButton{
+        left: calc(76% - 35px);
+        top: calc(86% - 35px);
+    }
+}

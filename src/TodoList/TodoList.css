@@ -1,0 +1,17 @@
+.TodoList {
+    display: inline-block;
+    margin-top: 20px;
+    height: 50vh;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y proximity;
+    background-color: rgba(255, 255, 255, 0.666);
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.TodoList::-webkit-scrollbar {
+    display: none;
+}
