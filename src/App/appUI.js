@@ -8,6 +8,7 @@ import { TodoItem } from "../TodoItem";
 import { Modal } from "../Modal";
 import './AppUI.css'
 import { TodoForm } from "../TodoForm";
+import FadeIn from "react-fade-in";
 
 function AppUI() {
 const {
@@ -30,13 +31,15 @@ const {
             {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>} 
       
               {searchedTodos.map(todo => (
-                <TodoItem 
-                  key={todo.text} 
-                  text={todo.text}
-                  completed={todo.completed}
-                  onComplete={() => completeTodos(todo.text)}
-                  onDelete={() => deleteTodos(todo.text)}
-                />
+                <FadeIn>
+                  <TodoItem 
+                    key={todo.text} 
+                    text={todo.text}
+                    completed={todo.completed}
+                    onComplete={() => completeTodos(todo.text)}
+                    onDelete={() => deleteTodos(todo.text)}
+                  />
+                </FadeIn>
               ))}
           </TodoList>
 
