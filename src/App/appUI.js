@@ -9,7 +9,7 @@ import { Modal } from "../Modal";
 import './AppUI.css'
 import { TodoForm } from "../TodoForm";
 import FadeIn from "react-fade-in";
-
+import { TodoLoad } from "../ContentLoader/ContentLoader";
 function AppUI() {
 const {
   error,
@@ -27,7 +27,7 @@ const {
       <TodoSearch />
       <TodoList>
             {error && <p>Desespérate, hubo un error...</p>}
-            {loading && <p>Estamos cargando, no desesperes...</p>}
+            {loading && <TodoLoad/>}
             {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>} 
       
               {searchedTodos.map(todo => (
