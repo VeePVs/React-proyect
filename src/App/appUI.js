@@ -8,8 +8,9 @@ import { TodoItem } from "../TodoItem";
 import { Modal } from "../Modal";
 import './AppUI.css'
 import { TodoForm } from "../TodoForm";
-import FadeIn from "react-fade-in";
 import { TodoLoad } from "../ContentLoader/ContentLoader";
+import FadeIn from "react-fade-in/lib/FadeIn";
+
 function AppUI() {
 const {
   error,
@@ -26,21 +27,21 @@ const {
       <TodoCounter />
       <TodoSearch />
       <TodoList>
-            {error && <p>Desespérate, hubo un error...</p>}
-            {loading && <TodoLoad/>}
-            {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>} 
-      
-              {searchedTodos.map(todo => (
-                <FadeIn>
-                  <TodoItem 
-                    key={todo.text} 
-                    text={todo.text}
-                    completed={todo.completed}
-                    onComplete={() => completeTodos(todo.text)}
-                    onDelete={() => deleteTodos(todo.text)}
-                  />
-                </FadeIn>
-              ))}
+            <FadeIn>
+              {error && <p>Desespérate, hubo un error...</p>}
+              {loading && <TodoLoad/>}
+              {(!loading && !searchedTodos.length) && <p>Crea tu primer TODO!</p>} 
+        
+                {searchedTodos.map(todo => (
+                    <TodoItem 
+                      key={todo.text} 
+                      text={todo.text}
+                      completed={todo.completed}
+                      onComplete={() => completeTodos(todo.text)}
+                      onDelete={() => deleteTodos(todo.text)}
+                    />
+                ))}
+            </FadeIn>
           </TodoList>
 
           {!!openModal && (
