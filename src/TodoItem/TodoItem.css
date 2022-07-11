@@ -26,6 +26,7 @@
 
 .TodoItem-p--complete {
     text-decoration: line-through;
+    transition: 3s;
     cursor: default;
     color: rgba(0, 0, 0, 0.363);
 }

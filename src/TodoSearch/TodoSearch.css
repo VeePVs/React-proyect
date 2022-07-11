@@ -10,9 +10,10 @@
     font-size: 1.7rem;
     text-align: center;
     outline: unset;
+    box-shadow: -5px 5px 25px 5px black;
 }
 
 .TodoSearch:focus {
-    border: 5px solid rgb(229, 135, 255);
+    border: 2px solid rgb(229, 135, 255);
     transition: 1s;
 }
